@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.InventarioViceCity" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/neon_pink</item>
+        <item name="colorOnPrimary">@color/night</item>
+        <item name="colorSecondary">@color/cyan</item>
+        <item name="colorOnSecondary">@color/night</item>
+        <item name="colorTertiary">@color/sunset</item>
+        <item name="colorOnTertiary">@color/night</item>
+        <item name="colorSurface">@color/panel</item>
+        <item name="colorOnSurface">@color/texto</item>
+        <item name="colorControlActivated">@color/cyan</item>
+        <item name="android:windowBackground">@color/night</item>
+        <item name="android:statusBarColor">@color/night</item>
+        <item name="android:navigationBarColor">@color/night</item>
+    </style>
+
+    <!-- Campos de texto: fondo oscuro con borde, como los campos de la tienda -->
+    <style name="CampoInventario" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:textColor">@color/texto</item>
+        <item name="android:textColorHint">@color/texto_suave</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+    </style>
+
+    <!-- Botones: mismo ancho para que queden en cuadrícula de 2 x 2 -->
+    <style name="BotonInventario" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">54dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

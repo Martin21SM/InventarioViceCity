@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/night"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Cabecera con la escena de atardecer y el título -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/escena_sunset" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_hero_sombra" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.2"
+                    android:text="GTA 6 · VICE CITY"
+                    android:textColor="@color/cyan"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:shadowColor="@color/neon_pink"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="16"
+                    android:text="INVENTARIO"
+                    android:textColor="@color/neon_pink"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Artículos, vehículos y accesorios"
+                    android:textColor="@color/texto_suave"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Formulario: mismos campos y botones de siempre -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etCodigo"
+                style="@style/CampoInventario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Código (ej. ART-001)"
+                android:inputType="textCapCharacters" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                style="@style/CampoInventario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Nombre del artículo"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/etCategoria"
+                style="@style/CampoInventario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Categoría"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/etCantidad"
+                style="@style/CampoInventario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Cantidad"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etPrecio"
+                style="@style/CampoInventario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:hint="Precio ($)"
+                android:inputType="number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    style="@style/BotonInventario"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_boton_guardar"
+                    android:text="Guardar"
+                    android:textColor="@color/night" />
+
+                <Button
+                    android:id="@+id/btnBuscar"
+                    style="@style/BotonInventario"
+                    android:background="@drawable/bg_boton_contorno_cyan"
+                    android:text="Buscar"
+                    android:textColor="@color/cyan" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    style="@style/BotonInventario"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_boton_contorno_sunset"
+                    android:text="Actualizar"
+                    android:textColor="@color/sunset" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    style="@style/BotonInventario"
+                    android:background="@drawable/bg_boton_contorno_danger"
+                    android:text="Eliminar"
+                    android:textColor="@color/danger" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Lista del inventario -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:letterSpacing="0.15"
+            android:text="ARTÍCULOS EN INVENTARIO"
+            android:textColor="@color/lavender"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInventario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Botón principal: degradado rosa a naranja, como el botón de Vice City Drip -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="0"
+        android:endColor="@color/sunset"
+        android:startColor="@color/neon_pink" />
+    <corners android:radius="12dp" />
+</shape>

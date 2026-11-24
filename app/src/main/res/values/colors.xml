@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fondo y superficies -->
+    <color name="night">#FF1A0F24</color>
+    <color name="panel">#FF241634</color>
+    <color name="panel_borde">#FF4A2F6A</color>
+    <color name="campo">#FF2D1D42</color>
+
+    <!-- Acentos neón de Vice City -->
+    <color name="neon_pink">#FFFF2E88</color>
+    <color name="sunset">#FFFF8A3D</color>
+    <color name="cyan">#FF2EE6F0</color>
+    <color name="lavender">#FFB9A3FF</color>
+    <color name="danger">#FFFF4D6D</color>
+
+    <!-- Estados de stock -->
+    <color name="verde">#FF3DDC97</color>
+    <color name="amarillo">#FFFFD166</color>
+
+    <!-- Textos -->
+    <color name="texto">#FFFFF5FB</color>
+    <color name="texto_suave">#FFBFA9D6</color>
+</resources>
