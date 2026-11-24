@@ -17,13 +17,13 @@ Aplicación Android de inventario que guarda los artículos en una base local (S
 - Arquitectura por capas: `model`, `repositorio`, `viewmodel`, `ui`
 
 ## Capturas
-| Login | Registro | Inventario |
-|-------|----------|------------|
-| ![Login](capturas/login.png) | ![Registro](capturas/registro.png) | ![Inventario](capturas/inventario.png) |
+| Registro | Base de datos (Firestore) |
+|----------|---------------------------|
+| ![Registro](Capturas/Registro.png) | ![Firestore](Capturas/DataBase.png) |
 
-| Firestore | Authentication |
-|-----------|----------------|
-| ![Firestore](capturas/firestore.png) | ![Auth](capturas/auth.png) |
+| Authentication | Authentication (usuarios) |
+|----------------|---------------------------|
+| ![Autenticacion](Capturas/Autenticacion.png) | ![Autenticacion 2](Capturas/Autenticacion2.png) |
 
 ## Cómo ejecutar el proyecto
 1. Clona el repositorio:
